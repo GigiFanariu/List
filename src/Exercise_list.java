@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -9,18 +10,20 @@ public class Exercise_list {
 
         System.out.println(cityNames);
 
-        List<String> kingsOfRome =Arrays.asList(
-        "Romolo",
-        "Numa Pompilio",
-        "Tullio Ostilio",
-        "Anco Marzio",
-        "Tarquinio Prisco",
-        "Servio Tullio",
-        "Tarquinio il Superbo"
-        );
+        ArrayList<String> kingsOfRome = new ArrayList<String>();
+
+        kingsOfRome.add("Romolo");
+        kingsOfRome.add("Numa Pompilio");
+        kingsOfRome.add("Tullo Ostilio");
+        kingsOfRome.add("Anco Marzio");
+        kingsOfRome.add("Tarquinio Prisco");
+        kingsOfRome.add("Servio Tullio");
+        kingsOfRome.add("Tarquinio il Superbo");
+
         System.out.println(kingsOfRome);
-        String[] kingsOfRomeArray = kingsOfRome.toArray(new String[0]);
+        String[] kingsOfRomeArray = new String[0];
         kingsOfRomeArray[6] = "Tarquinio il Superbo";
+        kingsOfRomeArray = kingsOfRome.toArray(new String[0]);
         System.out.println(Arrays.toString(kingsOfRomeArray));
     }
 }
